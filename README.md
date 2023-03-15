@@ -1,12 +1,9 @@
-# golib-arraymap
+# arraymap
 
-A Go utility structure works like an ordered map, i.e. a map that keeps the inserting order.
+A Go utility package works like an ordered map, i.e. a map that keeps the inserting order.
 
 ## Examples
 ```
-import (
-    arraymap "github.com/mixcode/golib-arraymap"
-)
 
 func someFunc() {
     amap := arraymap.NewArrayMap[string, int]()

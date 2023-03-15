@@ -3,7 +3,7 @@ package arraymap_test
 import (
 	"fmt"
 
-	arraymap "github.com/mixcode/golib-arraymap"
+	"github.com/mixcode-lib/arraymap"
 )
 
 func Example() {
