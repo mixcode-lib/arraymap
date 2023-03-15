@@ -20,7 +20,7 @@ func TestArrayMap(t *testing.T) {
 	am := NewArrayMap[int, string]()
 
 	for _, e := range t1 {
-		am.Set(e.K, e.V)
+		am.Put(e.K, e.V)
 	}
 	if am.Len() != len(t1) {
 		t.Fatalf("Len() fail")

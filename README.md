@@ -7,12 +7,12 @@ A Go utility structure works like an ordered map, i.e. a map that keeps the inse
     amap := arraymap.NewArrayMap[string, int]()
 
     // add some key and values
-    amap.Set("Alice", 101)
-    amap.Set("Bob", 102)
-    amap.Set("Carol", 103)
-    amap.Set("Dave", 104)
-    amap.Set("Mallory", 113)
-    amap.Set("Sybil", 119)
+    amap.Put("Alice", 101)
+    amap.Put("Bob", 102)
+    amap.Put("Carol", 103)
+    amap.Put("Dave", 104)
+    amap.Put("Mallory", 113)
+    amap.Put("Sybil", 119)
 
     // Keys are stored in amap.Key[], and values are stored in amap.Value[].
     // Key and value at the same index matches each other.

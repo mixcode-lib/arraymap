@@ -24,9 +24,9 @@ func (m *ArrayMap[K, V]) Len() int {
 	return len(m.Key)
 }
 
-// Set a key-value pair.
+// Put a key-value pair.
 // If the key already exists, then the value is overwritten.
-func (m *ArrayMap[K, V]) Set(key K, value V) {
+func (m *ArrayMap[K, V]) Put(key K, value V) {
 	idx, ok := m.Index[key]
 	if ok {
 		// key already in the map
@@ -39,20 +39,20 @@ func (m *ArrayMap[K, V]) Set(key K, value V) {
 	}
 }
 
-// Set multiple key-value pairs.
-func (m *ArrayMap[K, V]) SetValues(key []K, value []V) {
+// Put multiple key-value pairs.
+func (m *ArrayMap[K, V]) PutValues(key []K, value []V) {
 	l, lv := len(key), len(value)
 	if l > lv {
 		l = lv
 	}
 	for i := 0; i < l; i++ {
-		m.Set(key[i], value[i])
+		m.Put(key[i], value[i])
 	}
 }
 
 // Append a ArrayMap to another ArrayMap.
 func (m *ArrayMap[K, V]) Append(m2 *ArrayMap[K, V]) {
-	m.SetValues(m2.Key, m2.Value)
+	m.PutValues(m2.Key, m2.Value)
 }
 
 // Fetch a value with the key.
