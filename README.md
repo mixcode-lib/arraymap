@@ -4,6 +4,11 @@ A Go utility structure works like an ordered map, i.e. a map that keeps the inse
 
 ## Examples
 ```
+import (
+    arraymap "github.com/mixcode/golib-arraymap"
+)
+
+func someFunc() {
     amap := arraymap.NewArrayMap[string, int]()
 
     // add some key and values
@@ -33,4 +38,6 @@ A Go utility structure works like an ordered map, i.e. a map that keeps the inse
 
     // Fetch() is a Get() without validity check
     fmt.Printf("Mallory %d\n", amap.Fetch("Mallory"))
+}
+
 ```

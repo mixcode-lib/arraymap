@@ -11,7 +11,7 @@ type ArrayMap[K comparable, V any] struct {
 }
 
 // Make a array map.
-func NewArrayMap[K comparable, V any]() *ArrayMap[K, V] {
+func New[K comparable, V any]() *ArrayMap[K, V] {
 	return &ArrayMap[K, V]{
 		Key:   make([]K, 0),
 		Value: make([]V, 0),

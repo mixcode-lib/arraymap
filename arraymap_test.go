@@ -17,7 +17,7 @@ func TestArrayMap(t *testing.T) {
 		ka[i], va[i] = t1[i].K, t1[i].V
 	}
 
-	am := NewArrayMap[int, string]()
+	am := New[int, string]()
 
 	for _, e := range t1 {
 		am.Put(e.K, e.V)

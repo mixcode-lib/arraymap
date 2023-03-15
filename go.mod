@@ -1,3 +1,3 @@
-module github.com/mixcode/golib/arraymap
+module github.com/mixcode/golib-arraymap
 
 go 1.20

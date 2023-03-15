@@ -3,11 +3,11 @@ package arraymap_test
 import (
 	"fmt"
 
-	"github.com/mixcode/golib/arraymap"
+	arraymap "github.com/mixcode/golib-arraymap"
 )
 
 func Example() {
-	amap := arraymap.NewArrayMap[string, int]()
+	amap := arraymap.New[string, int]()
 
 	// add some key-value pairs.
 	// keys and values are stored in the put order.
