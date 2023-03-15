@@ -84,7 +84,8 @@ func (m *ArrayMap[K, V]) HasKey(key K) (ok bool) {
 }
 
 // Delete entries with keys.
-// Note that this operation is a bit costly because arrays are copied internally.
+// The indexs of other entries may be changed after deletion.
+// Also note that this operation is a bit costly because arrays are copied internally.
 func (m *ArrayMap[K, V]) Delete(key ...K) {
 	// make a list of index to be deleted
 	idx := make([]int, 0, len(key)+1)
@@ -98,6 +99,7 @@ func (m *ArrayMap[K, V]) Delete(key ...K) {
 }
 
 // Delete entries at indexes.
+// The indexs of other entries may be changed after the deletion.
 // Note that this operation is a bit costly because arrays are copied internally.
 func (m *ArrayMap[K, V]) DeleteAt(idx ...int) {
 	if len(idx) == 0 {
